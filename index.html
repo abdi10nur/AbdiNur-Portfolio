@@ -2,12 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Abdilhamid Nur | Sales Portfolio</title>
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -18,515 +16,132 @@
     }
 
     body {
-      font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(98, 0, 255, 0.35), transparent 35%),
-        radial-gradient(circle at 80% 20%, rgba(0, 200, 255, 0.22), transparent 30%),
-        radial-gradient(circle at 50% 100%, rgba(255, 255, 255, 0.08), transparent 35%),
-        #07070b;
+      font-family: 'Inter', sans-serif;
+      background: #07070b;
       color: white;
       line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-      background-size: 55px 55px;
-      pointer-events: none;
-      z-index: -1;
-    }
-
-    a {
-      color: inherit;
-      text-decoration: none;
-    }
-
-    .nav {
-      position: fixed;
-      top: 18px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: min(1100px, 92%);
-      z-index: 99;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 14px 18px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 999px;
-      background: rgba(10, 10, 16, 0.7);
-      backdrop-filter: blur(18px);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-    }
-
-    .logo {
-      font-weight: 900;
-      letter-spacing: -0.04em;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 18px;
-      font-size: 14px;
-      color: #d7d7df;
-    }
-
-    .nav-links a:hover {
-      color: white;
     }
 
     section {
-      padding: 110px 8%;
-      max-width: 1350px;
+      padding: 100px 8%;
+      max-width: 1200px;
       margin: auto;
     }
 
-    .hero {
-      min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: center;
-      gap: 60px;
-      padding-top: 150px;
-    }
-
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 9px 14px;
-      border: 1px solid rgba(255,255,255,0.14);
-      border-radius: 999px;
-      background: rgba(255,255,255,0.07);
-      color: #d7d7df;
-      font-size: 13px;
-      font-weight: 700;
-      margin-bottom: 22px;
-    }
-
-    .pulse {
-      width: 8px;
-      height: 8px;
-      background: #7cffb2;
-      border-radius: 50%;
-      box-shadow: 0 0 0 0 rgba(124,255,178,0.7);
-      animation: pulse 1.8s infinite;
-    }
-
-    @keyframes pulse {
-      70% { box-shadow: 0 0 0 12px rgba(124,255,178,0); }
-      100% { box-shadow: 0 0 0 0 rgba(124,255,178,0); }
-    }
-
     h1 {
-      font-size: clamp(48px, 8vw, 95px);
-      line-height: 0.95;
-      letter-spacing: -0.08em;
-      margin-bottom: 26px;
-    }
-
-    .gradient-text {
-      background: linear-gradient(120deg, #ffffff, #b7b7ff, #79e8ff);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    .hero p {
-      font-size: 20px;
-      color: #d5d5dd;
-      max-width: 670px;
-      margin-bottom: 34px;
-    }
-
-    .buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 14px;
-    }
-
-    .button {
-      padding: 14px 22px;
-      border-radius: 999px;
-      font-weight: 900;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      transition: 0.25s ease;
-    }
-
-    .button.primary {
-      background: white;
-      color: #050508;
-      box-shadow: 0 18px 40px rgba(255,255,255,0.18);
-    }
-
-    .button.secondary {
-      border: 1px solid rgba(255,255,255,0.18);
-      color: white;
-      background: rgba(255,255,255,0.06);
-    }
-
-    .button:hover {
-      transform: translateY(-4px);
-    }
-
-    .hero-card {
-      position: relative;
-    }
-
-    .hero-img-wrap {
-      border-radius: 36px;
-      padding: 10px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.26), rgba(255,255,255,0.04));
-      box-shadow: 0 40px 100px rgba(0,0,0,0.55);
-      transform: rotate(2deg);
-    }
-
-    .hero-img-wrap img {
-      width: 100%;
-      display: block;
-      border-radius: 28px;
-      object-fit: cover;
-    }
-
-    .floating-stat {
-      position: absolute;
-      left: -28px;
-      bottom: 40px;
-      padding: 18px 20px;
-      border-radius: 24px;
-      background: rgba(255,255,255,0.12);
-      backdrop-filter: blur(18px);
-      border: 1px solid rgba(255,255,255,0.16);
-      box-shadow: 0 20px 60px rgba(0,0,0,0.35);
-      animation: float 4s ease-in-out infinite;
-    }
-
-    .floating-stat strong {
-      font-size: 32px;
-      display: block;
-      line-height: 1;
-    }
-
-    .floating-stat span {
-      color: #d5d5dd;
-      font-size: 13px;
-      font-weight: 700;
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-12px); }
-    }
-
-    .section-head {
-      margin-bottom: 38px;
-      max-width: 850px;
-    }
-
-    .eyebrow {
-      text-transform: uppercase;
-      color: #9ea0ff;
-      letter-spacing: 0.2em;
-      font-size: 13px;
-      font-weight: 900;
-      margin-bottom: 12px;
+      font-size: clamp(64px, 10vw, 110px);
+      line-height: 0.9;
+      margin-bottom: 20px;
+      letter-spacing: -0.05em;
     }
 
     h2 {
-      font-size: clamp(34px, 5vw, 58px);
-      line-height: 1.02;
-      letter-spacing: -0.06em;
-      margin-bottom: 18px;
+      font-size: 42px;
+      margin-bottom: 20px;
     }
 
-    .section-head p {
-      color: #cfcfd8;
+    p {
+      color: #d6d6d6;
       font-size: 18px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 60px;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .buttons a {
+      display: inline-block;
+      margin: 10px 10px 0 0;
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    .primary {
+      background: white;
+      color: black;
+    }
+
+    .secondary {
+      border: 1px solid #444;
+      color: white;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 30px;
     }
 
     .cards {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 22px;
+      grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+      gap: 20px;
     }
 
     .card {
-      position: relative;
-      overflow: hidden;
       padding: 30px;
-      border-radius: 30px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 25px 70px rgba(0,0,0,0.28);
-      transition: 0.25s ease;
-    }
-
-    .card::before {
-      content: "";
-      position: absolute;
-      inset: -1px;
-      background: linear-gradient(120deg, rgba(255,255,255,0.16), transparent 40%);
-      opacity: 0;
-      transition: 0.25s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255,255,255,0.26);
-    }
-
-    .card:hover::before {
-      opacity: 1;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
     }
 
     .stat {
-      font-size: 52px;
-      font-weight: 900;
-      letter-spacing: -0.06em;
-      margin-bottom: 8px;
-    }
-
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      color: #cfcfd8;
-      position: relative;
-      z-index: 1;
-    }
-
-    .about-grid {
-      display: grid;
-      grid-template-columns: 0.9fr 1.1fr;
-      gap: 55px;
-      align-items: center;
-    }
-
-    .about-img {
-      width: 100%;
-      border-radius: 34px;
-      box-shadow: 0 40px 90px rgba(0,0,0,0.5);
-    }
-
-    .about-panel {
-      padding: 36px;
-      border-radius: 34px;
-      background: rgba(255,255,255,0.07);
-      border: 1px solid rgba(255,255,255,0.12);
-    }
-
-    .about-panel p {
-      color: #d7d7df;
-      font-size: 18px;
-      margin-bottom: 18px;
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 22px;
-    }
-
-    .tag {
-      padding: 9px 13px;
-      border-radius: 999px;
-      background: rgba(255,255,255,0.08);
-      border: 1px solid rgba(255,255,255,0.12);
-      color: #e9e9ef;
-      font-size: 13px;
+      font-size: 48px;
       font-weight: 800;
     }
 
-    .video-card {
-      max-width: 520px;
-      margin: 35px auto 0;
-      padding: 12px;
-      border-radius: 34px;
-      background: linear-gradient(145deg, rgba(255,255,255,0.24), rgba(255,255,255,0.05));
-      border: 1px solid rgba(255,255,255,0.15);
-      box-shadow: 0 35px 90px rgba(0,0,0,0.45);
-    }
-
-    .loom-embed {
-      position: relative;
-      padding-bottom: 177.77777777777777%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 24px;
-      background: #111;
-    }
-
-    .loom-embed iframe {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
-
-    .reviews-grid {
-      columns: 3 280px;
-      column-gap: 22px;
-    }
-
-    .review-card {
-      break-inside: avoid;
-      margin-bottom: 22px;
-      padding: 26px;
-      border-radius: 26px;
-      background: rgba(255,255,255,0.075);
-      border: 1px solid rgba(255,255,255,0.12);
-      box-shadow: 0 22px 60px rgba(0,0,0,0.24);
-    }
-
-    .quote {
-      font-size: 42px;
-      line-height: 1;
-      color: #9ea0ff;
-      margin-bottom: 10px;
-      font-weight: 900;
-    }
-
-    .review-card p {
-      color: #e1e1e8;
-      font-size: 16px;
-    }
-
-    .contact-box {
-      position: relative;
-      overflow: hidden;
-      border-radius: 36px;
-      padding: 42px;
-      background: white;
-      color: #08080d;
-      box-shadow: 0 35px 90px rgba(0,0,0,0.38);
-    }
-
-    .contact-box h2 {
-      color: #08080d;
-    }
-
-    .contact-box p {
-      color: #33333c;
-      font-size: 18px;
-      margin-bottom: 18px;
-    }
-
-    .contact-info {
+    .about {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin-top: 28px;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
     }
 
-    .contact-item {
-      padding: 18px;
-      border-radius: 22px;
-      background: #f1f1f4;
-      font-weight: 900;
-      color: #08080d;
+    .about img {
+      width: 100%;
+      border-radius: 30px;
     }
 
-    .contact-actions {
-      margin-top: 26px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
+    .reviews {
+      columns: 3 280px;
+      column-gap: 20px;
     }
 
-    .contact-actions .button {
-      background: #08080d;
-      color: white;
+    .review {
+      break-inside: avoid;
+      margin-bottom: 20px;
+      padding: 25px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
     }
 
-    footer {
-      padding: 34px 8%;
-      color: #898996;
-      text-align: center;
-      font-size: 14px;
+    .video {
+      max-width: 500px;
+      margin: 40px auto;
     }
 
-    .reveal {
-      animation: reveal 0.8s ease both;
+    .contact {
+      background: white;
+      color: black;
+      padding: 40px;
+      border-radius: 20px;
     }
 
-    @keyframes reveal {
-      from {
-        opacity: 0;
-        transform: translateY(24px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
+    .contact p {
+      color: black;
     }
 
-    @media (max-width: 950px) {
-      .nav-links {
-        display: none;
-      }
-
-      .hero,
-      .about-grid {
+    @media(max-width: 800px){
+      .hero, .about {
         grid-template-columns: 1fr;
       }
 
-      .hero {
-        padding-top: 140px;
-      }
-
-      .hero-img-wrap {
-        transform: none;
-      }
-
-      .floating-stat {
-        left: 18px;
-        bottom: 18px;
-      }
-
-      .cards,
-      .contact-info {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 85px 6%;
-      }
-
-      .video-card {
-        max-width: 390px;
-      }
-    }
-
-    @media (max-width: 520px) {
       h1 {
-        font-size: 48px;
-      }
-
-      .button {
-        width: 100%;
-      }
-
-      .hero p {
-        font-size: 18px;
-      }
-
-      .contact-box {
-        padding: 28px;
-      }
-
-      .nav {
-        top: 10px;
+        font-size: 56px;
       }
     }
   </style>
@@ -534,200 +149,106 @@
 
 <body>
 
-  <nav class="nav">
-    <a href="#" class="logo">Abdilhamid Nur</a>
-    <div class="nav-links">
-      <a href="#results">Results</a>
-      <a href="#about">About</a>
-      <a href="#pitch">Pitch</a>
-      <a href="#reviews">Reviews</a>
-      <a href="#contact">Contact</a>
-    </div>
-  </nav>
-
-  <section class="hero reveal">
+  <!-- HERO -->
+  <section class="hero">
     <div>
-      <div class="badge"><span class="pulse"></span> Sales Portfolio</div>
-      <h1>Hi, I’m Abdi.<br><span class="gradient-text">I create pipeline.</span></h1>
+      <h1>Hi, I’m Abdi.</h1>
       <p>
         A top-performing TELUS sales rep known for high-volume outbound,
-        strong closing, and delivering customer experiences people remember.
+        strong closing, and delivering a standout customer experience.
       </p>
 
       <div class="buttons">
-        <a href="#results" class="button primary">See My Results</a>
-        <a href="#pitch" class="button secondary">Watch My Pitch</a>
-        <a href="#contact" class="button secondary">Contact Me</a>
+        <a href="#results" class="primary">See My Results</a>
+        <a href="#pitch" class="secondary">Watch My Pitch</a>
+        <a href="#contact" class="secondary">Contact Me</a>
       </div>
     </div>
 
-    <div class="hero-card">
-      <div class="hero-img-wrap">
-        <img src="suit.jpg" alt="Abdilhamid Nur professional photo">
-      </div>
-
-      <div class="floating-stat">
-        <strong>60+</strong>
-        <span>Deals Closed Monthly</span>
-      </div>
-    </div>
+    <img src="suit.jpg">
   </section>
 
-  <section id="results" class="reveal">
-    <div class="section-head">
-      <p class="eyebrow">Proven Performance</p>
-      <h2>Built through outbound, follow-up, and closing.</h2>
-      <p>
-        My results come from consistency, strong customer conversations,
-        and the ability to turn cold opportunities into real revenue.
-      </p>
-    </div>
+  <!-- RESULTS -->
+  <section id="results">
+    <h2>Results</h2>
 
     <div class="cards">
       <div class="card">
         <div class="stat">60+</div>
-        <h3>Deals Monthly</h3>
-        <p>Consistently closing high-volume sales through outbound, discovery, objection handling, and follow-up.</p>
+        <p>Deals closed monthly through outbound and closing.</p>
       </div>
 
       <div class="card">
         <div class="stat">Top 10</div>
-        <h3>Central Canada</h3>
-        <p>Ranked among top-performing TELUS reps through consistent execution and strong customer conversations.</p>
+        <p>Ranked among top TELUS reps in Central Canada.</p>
       </div>
 
       <div class="card">
         <div class="stat">16</div>
-        <h3>Lines in One Deal</h3>
-        <p>Closed a major business activation end-to-end and built a relationship that became repeat business.</p>
+        <p>Lines closed in a single business deal.</p>
       </div>
     </div>
   </section>
 
-  <section id="about" class="reveal">
-    <div class="about-grid">
-      <img class="about-img" src="basketball.jpg" alt="Abdilhamid Nur basketball photo">
+  <!-- ABOUT -->
+  <section class="about">
+    <div>
+      <h2>About Me</h2>
 
-      <div class="about-panel">
-        <p class="eyebrow">About Me</p>
-        <h2>Competitive by nature. Consistent by choice.</h2>
-
-        <p>
-          I recently graduated with a diploma in Business Administration,
-          specializing in Supply Chain and Operations Management. That background
-          taught me how to think in systems, stay organized under pressure, and
-          focus on efficiency, follow-through, and measurable outcomes.
-        </p>
-
-        <p>
-          Outside of work, I stay active through the gym and sports. I’m naturally
-          competitive, and I enjoy pushing myself physically and mentally. I also
-          like going for walks, exploring nature, and sightseeing as a way to reset
-          and stay balanced.
-        </p>
-
-        <p>
-          Sales stood out to me because it combines competition, communication,
-          and results. I enjoy turning conversations into trust, understanding what
-          people actually need, and helping them make confident decisions.
-        </p>
-
-        <div class="tags">
-          <span class="tag">Outbound</span>
-          <span class="tag">Closing</span>
-          <span class="tag">Customer Experience</span>
-          <span class="tag">Competitive Mindset</span>
-          <span class="tag">High Volume Sales</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="pitch" class="reveal">
-    <div class="section-head" style="text-align:center; margin-left:auto; margin-right:auto;">
-      <p class="eyebrow">Pitch</p>
-      <h2>Watch me sell.</h2>
       <p>
-        A quick look at how I communicate value, overcome objections,
-        build urgency, and keep the message simple.
+        I recently graduated from Business Administration with a concentration in Supply Chain & Operations Management.
+      </p>
+
+      <p>
+        I stay active through the gym and sports, and I’m naturally competitive. I also enjoy going for walks, exploring nature, and sightseeing.
+      </p>
+
+      <p>
+        Sales stood out to me because it combines competition, communication, and results. I enjoy turning conversations into outcomes and continuously improving.
       </p>
     </div>
 
-    <div class="video-card">
-      <div class="loom-embed">
-        <iframe src="https://www.loom.com/embed/3786668acf5f48a5b5cfbf9f1b3495fc" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-      </div>
-    </div>
-
-    <div style="text-align:center; margin-top:26px;">
-      <a href="https://www.loom.com/share/3786668acf5f48a5b5cfbf9f1b3495fc" target="_blank" class="button secondary">Open in Loom</a>
-    </div>
+    <img src="basketball.jpg">
   </section>
 
-  <section id="reviews" class="reveal">
-    <div class="section-head">
-      <p class="eyebrow">Client Feedback</p>
-      <h2>Real customers. Real experience.</h2>
-      <p>
-        Customers remember the experience, not just the transaction.
-        That is where I separate myself.
-      </p>
-    </div>
+  <!-- VIDEO -->
+  <section id="pitch">
+    <h2>Watch My Pitch</h2>
 
-    <div class="reviews-grid">
-      <div class="review-card">
-        <div class="quote">“</div>
-        <p>Abdi made my experience a very positive one. He was courteous and knowledgeable. I intend to deal with him again directly when ready to move my internet and home phone to TELUS/Koodo.</p>
-      </div>
-
-      <div class="review-card">
-        <div class="quote">“</div>
-        <p>Abdi is an excellent sales rep. He got everything set up for us to switch to TELUS, kept our old phone number, and even helped with tech support after installation. Very impressed with his level of customer service.</p>
-      </div>
-
-      <div class="review-card">
-        <div class="quote">“</div>
-        <p>Abdi was a pleasure to work with. He asked lots of questions and gave me amazing service. I moved over two lines from Rogers and will encourage friends and family to do the same.</p>
-      </div>
-
-      <div class="review-card">
-        <div class="quote">“</div>
-        <p>Abdi was knowledgeable and had great customer support, ensuring that the phone was working and explaining features specific to my needs.</p>
-      </div>
-
-      <div class="review-card">
-        <div class="quote">“</div>
-        <p>Abdi was excellent and took care of transferring my two phone lines to TELUS from Rogers effectively and timely.</p>
+    <div class="video">
+      <div style="position: relative; padding-bottom: 177.7777%; height: 0;">
+        <iframe src="https://www.loom.com/embed/3786668acf5f48a5b5cfbf9f1b3495fc"
+        frameborder="0"
+        allowfullscreen
+        style="position:absolute; top:0; left:0; width:100%; height:100%; border-radius:20px;">
+        </iframe>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="reveal">
-    <div class="contact-box">
-      <p class="eyebrow" style="color:#5c5cff;">Contact</p>
-      <h2>Let’s connect.</h2>
-      <p>
-        Interested in connecting about sales, outbound, BDR/SDR roles,
-        or customer acquisition? Reach out directly.
-      </p>
+  <!-- REVIEWS -->
+  <section>
+    <h2>Client Feedback</h2>
 
-      <div class="contact-info">
-        <a class="contact-item" href="mailto:abdilhamid20@gmail.com">Email<br>abdilhamid20@gmail.com</a>
-        <a class="contact-item" href="https://linkedin.com/in/abdilhamid" target="_blank">LinkedIn<br>linkedin.com/in/abdilhamid</a>
-        <a class="contact-item" href="tel:18194430859">Phone<br>819-443-0859</a>
-      </div>
-
-      <div class="contact-actions">
-        <a href="tel:18194430859" class="button">Call Me</a>
-        <a href="mailto:abdilhamid20@gmail.com" class="button">Email Me</a>
-        <a href="https://linkedin.com/in/abdilhamid" target="_blank" class="button">LinkedIn</a>
-      </div>
+    <div class="reviews">
+      <div class="review">Abdi made my experience very positive. He was courteous and knowledgeable.</div>
+      <div class="review">Excellent sales rep. Very impressed with his customer service.</div>
+      <div class="review">Pleasure to work with. I moved over two lines thanks to him.</div>
+      <div class="review">Great support and very knowledgeable.</div>
+      <div class="review">Handled everything effectively and quickly.</div>
     </div>
   </section>
 
-  <footer>
-    © 2026 Abdilhamid Nur. Sales Portfolio.
-  </footer>
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Let’s Connect</h2>
+
+    <div class="contact">
+      <p>Email: abdilhamid20@gmail.com</p>
+      <p>LinkedIn: linkedin.com/in/abdilhamid</p>
+      <p>Phone: 819-443-0859</p>
+    </div>
+  </section>
 
 </body>
 </html>
